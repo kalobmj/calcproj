@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator Project 2024</title>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">KMJ calculator</h1>
+    </header>
+    <main class="container">
+        <h1 id="calc-title">Sharp Calc</h1>
+        <div class="calc-container" id="calc-div">
+            <div class="sol-container" id="solution-container">
+                <p class="sol-text" id="displayed-solution">0</p>
+            </div>
+            <div class="extra-btn-container" id="under-solution-btn-container">
+                <button class="upper-btn" id="log-btn">log</button>
+                <button class="upper-btn" id="back-btn">back</button>
+            </div>
+            <hr />
+            <div class="user-btn-container" id="input-btn-container">
+                <button class="important-btn" id="clear-btn">C</button>
+                <button class="important-btn" id="par-btn">( )</button>
+                <button class="important-btn" id="per-btn">%</button>
+                <button class="important-btn" id="op-btn-divide">÷</button>
+                <button class="basic-btn" id="7-btn">7</button>
+                <button class="basic-btn" id="8-btn">8</button>
+                <button class="basic-btn" id="9-btn">9</button>
+                <button class="important-btn" id="op-btn-multiply">x</button>
+                <button class="basic-btn" id="4-btn">4</button>
+                <button class="basic-btn" id="5-btn">5</button>
+                <button class="basic-btn" id="6-btn">6</button>
+                <button class="important-btn" id="op-btn-subtract">-</button>
+                <button class="basic-btn" id="1-btn">1</button>
+                <button class="basic-btn" id="2-btn">2</button>
+                <button class="basic-btn" id="3-btn">3</button>
+                <button class="important-btn" id="op-btn-add">+</button>
+                <button class="basic-btn" id="pos-neg-btn">+/-</button>
+                <button class="basic-btn" id="0-btn">0</button>
+                <button class="basic-btn" id="decimal-btn">.</button>
+                <button class="important-btn" id="equals-btn">=</button>
+            </div>
+            <div class="user-log-container" id="log-container">
+                <div class="log-text-main" id="log-area" style="overflow-y:auto">
+                    <p class="log-text" id="log-text-area"></p>
+                </div>
+                <div class="log-area-clear-btn" id="log-area-clear">
+                    <button class="log-clear" id="log-clear-btn">Clear History</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>

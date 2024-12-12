@@ -1,0 +1,140 @@
+currNum var
+nextNum var
+
+use switch for operation
+
+log on side
+
+black/green/white color scheme
+
+val workNumber will be an array
+    array will be joined when adding operator or clicking equals button
+
+// workingStr = '99x99x99'
+
+function calcSol() {
+    let opArr = []; -> arr for operators
+    let newStr = []; -> arr for nums to work with
+    let localNum = 0; -> local num for calculating
+
+    const regex1 = /[0-9]/g;
+    const regex2 = /[+|\-|x|\/]/ -> /[+|\-|x|\/]/g
+
+    for (const char of workingStr) {
+        if (regex1.test(char)) {
+            opArr.push(char)
+        }
+        if (regex2.test(char)) {
+            newStr.push(char)
+        }
+    } // end for char
+
+    currNum = Number(newStr[0]); -> 99 (set currNum to first num)
+
+    for (let i = 0; i < opArr.length; i++) {
+
+        switch(opArr[i]) {
+            case '+':
+                currNum = currNum + Number(newStr[i+1]);
+                break;
+            case '-':
+                currNum = currNum - Number(newStr[i+1]);
+                break;
+            case 'x':
+                currNum = currNum * Number(newStr[i+1]);
+                break;
+            case '÷':
+                currNum = currNum / Number(newStr[i+1]);
+                break;
+            default:
+                console.log('something went wrong!');
+                break;
+        } // end switch
+    } // end for i loop
+
+} // end func
+
+need to add eventlistener for equals btn, if enter is pressed equals btn will be invoked
+
+need to workout when use clicks equals btn, but localStr has operator at the end.
+
+need to add '%' to switch and regex cases
+
+pos/neg btn is cancelling itself out
+
+need to fix pos/neg btn, only add neg val to front of equation, possibly not how it should be workingStr
+
+– -
+
+3 – 3 pos/neg
+3 - 3 subtract
+
+
+for pos/neg, look for first num looping starting from back, once found, put pos/neg in front of it. for taking neg away, loop starting from back and remove the neg symbol
+
+pos/neg solution for just a number -> 364 = -364
+
+pog/neg button basically done, just need to play around with it at the end after implenting all other btns
+
+par cannot be empty, and has to include numbers, might need to go back and create browser alerts for every wrong entry. or maybe just the important ones.
+
+calcSol will be super hard once you finish all of the buttons, might have to rewrite it completely
+
+clear, equals, and decimal btn left, also log btn and back btn
+
+    rules for decimal:
+can only be at the start of number, or inbetween 2 nums,
+numbers can only contain one decimal
+
+[x] if placing number after closed parenthesis, automatically add a multiply symbol.
+
+[x] might have to go back when working with strs, and fix how to solve equations with closed brackets
+
+[x] figure out way to split str by parentheses and solve each by each.
+
+[ ] possibly add a dark mode button somewhere on page to change from light to dark mode with appropriate emoji
+
+[x] need to solve problem of having multiple parentheses inside of itself. only supports one currently
+
+[x] currently working on being able to read and solve with multiple parentheses 
+
+[x] work on par button
+
+[x] work on order of operations for calcSol
+
+it seems like most of the calc problems we are running into involve brackets.
+
+need to move par variables into TWS loop, so that it updates everytime...
+
+[x] might have to rework calcSol to handle order of operations. ie: 627 + 119 / 7. -> 119 / 7 would need to be solved first.
+
+you can use the eval() method to solve strings of equations. but you will need to replace certain symbols so that eval can actually work. ÷ -> /
+
+[x] need to work on zeros and default number for str
+
+[ ] need to finish log btn. on each press of equals btn, the localStr will be added to an existing log array. the array will keep a log of each solution along with the equation.
+    -> possibly add an equals sign to the end of the equation and keep it to the log; => 326 + 555 = 
+
+[x] fix numbers for zero default // finished oneBtn see and copy for rest.
+
+[x] fix the function to allowing parsing with commas -> 666666 = 666,666
+
+[x] allow commas in numbers to appear when typing. possibly a check with each keystroke / press
+
+[x] potentially create whitespace around operators for better readability
+
+[x] instead of having a formatter on each btn, create a function that each btn calls.
+
+[ ] create function that tests equation format. Will throw an alert if equation is invalid. function is called on equalsBtn press
+    -> possible invald format with throw when end of equation includes a whitespace. This is because a whitespace will only follow an operator, and if the operator doesn't have a number following, It would then be invalid.
+
+[x] work on operator btn taking whitespace and adding multiple operators
+
+[ ] have log btn area contain a 'clear history' btn that will clear the log, but keep the currNum being displayed in the solution area the same.
+
+[ ] if you have time, go back and fix the scroll bar on the rpg game 
+._.
+
+biggest takeaway is we need to create constructors and use them, strings are not bad but takes alot of work mainuplating them
+
+

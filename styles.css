@@ -1,0 +1,245 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #C0EDF9;
+    overflow-y: scroll;
+    height: 100%;
+    background-image: linear-gradient(to left bottom, #a03ba1, #9744b8, #854fd0, #655ce8, #0069ff);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div[id="calc-div"] {
+    background-color: #010101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 475px;
+    min-width: 475px;
+    margin: 100px;
+    margin-top: 0;
+    border-radius: 5% 5% 10% 10%;
+}
+
+div[id="solution-container"] {
+    /* border-radius: 0%; */
+    background-color: rgb(33, 32, 32);
+    display: flex;
+    height: 50px;
+    justify-content: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #7FA442;
+    align-items: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+};
+
+p[id="displayed-solution"] {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-right: 5px;
+}
+
+p[id="displayed-solution"] {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-right: 5px;
+}
+
+div[id="under-solution-btn-container"] {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+};
+
+hr {
+    size: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-color: #161617 !important;
+}
+
+hr {
+    size: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-color: #161617 !important;
+}
+
+button[class="important-btn"] {
+    color:#7FA442 !important;
+    font-size: 25px !important;
+};
+
+button[class="important-btn"] {
+    color:#7FA442 !important;
+    font-size: 25px !important;
+};
+
+button[id="clear-btn"] {
+    color: #DB332A !important;
+}
+
+button[id="clear-btn"] {
+    color: #DB332A !important;
+}
+
+button[id="equals-btn"] {
+    background-color: #4F6622;
+}
+
+button:hover {
+    background-color: #3C4145 !important;
+}
+
+.basic-btn {
+    font-size: 30px !important;
+}
+
+div[id="log-container"] {
+    display: none;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-content: stretch;
+    max-height: 475px;
+    min-height: 475px;
+    margin-right: 15px;
+    margin-left: 15px;
+    min-height: 450px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+div[id="log-area"] {
+    display: inline;
+    text-align: right;
+    flex-wrap: wrap;
+    max-height: 350px;
+    align-content: flex-end;
+    padding-right: 30px;
+    padding-bottom: 100px;
+}
+
+div[id="log-area"] > p {
+    font-size: 20px;
+}
+
+/* p[id="log-text-area"] {
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    padding-bottom: 100px;
+} */
+
+button[class="upper-btn"] {
+    font-size: 15px;
+    height: auto;
+    width: 40px;
+    color: #96CDEB;
+    background-color: #0B1218;
+    border-radius: 5%;
+    border: 0;
+};
+
+div[id="log-area-clear"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div[id="log-area-clear"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button[id="log-clear-btn"] {
+    border-radius: 20px;
+    border: 0;
+    height: 2.5rem;
+    width: 175px;
+    margin: 20px;
+    font-size: 25px;
+    white-space: nowrap;
+    color: #96CDEB;
+}
+
+div[id="input-btn-container"] {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}
+
+div[id="input-btn-container"] button {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 15px;
+    font-size: 20px;
+    border: 0;
+    color: #96CDEB;
+    background-color: #0B1218;
+};
+
+button[id="par-btn"] {
+    color: #7FA442 !important;
+}
+
+button[id="par-btn"] {
+    color: #7FA442 !important;
+};
+
+h1[id="main-title"] {
+    display: flex;
+    justify-content: right !important;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+
+h1[id="main-title"] {
+    display: flex;
+    justify-content: right !important;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+
+h1[id="calc-title"] {
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 24px;
+    margin-left: 335px;
+};
+
